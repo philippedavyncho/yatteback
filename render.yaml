@@ -12,7 +12,7 @@ services:
     buildCommand: "./build.sh"
     startCommand: "python -m gunicorn back.asgi:application -k uvicorn.workers.UvicornWorker"
     envVars:
-      - key: DATABASE_URL
+      - key: "postgres://yattedb_user:jAn1Kn6Y7BZJHw5Ql684KA1RaTHkcJjD@dpg-cnkfjgun7f5s73drt26g-a.frankfurt-postgres.render.com/yattedb"
         fromDatabase:
           name: yattedb
           property: connectionString
