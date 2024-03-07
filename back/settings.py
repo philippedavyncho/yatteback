@@ -103,7 +103,7 @@ WSGI_APPLICATION = 'back.wsgi.application'
 DATABASES = {
     'default': dj_database_url.config(
         # Replace this value with your local database's connection string.
-        default='postgres://yattedb_user:jAn1Kn6Y7BZJHw5Ql684KA1RaTHkcJjD@dpg-cnkfjgun7f5s73drt26g-a/yattedb',
+        default='postgres://yattedb_lj62_user:EuwRa0H5ufnXuS1dIJazC2Xieun3g7LV@dpg-cnl0ceqcn0vc73d9e2m0-a/yattedb_lj62',
         conn_max_age=600
     )
 }

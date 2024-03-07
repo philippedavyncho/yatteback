@@ -1,8 +1,8 @@
 databases:
-  - name: shopyatte
+  - name: yattedb
     plan: free
-    databaseName: yattedb
-    user: yattedb_user
+    databaseName: yattedb_lj62
+    user: yattedb_lj62_user
 
 services:
   - type: web
@@ -12,7 +12,7 @@ services:
     buildCommand: "./build.sh"
     startCommand: "python -m gunicorn back.asgi:application -k uvicorn.workers.UvicornWorker"
     envVars:
-      - key: "postgres://yattedb_user:jAn1Kn6Y7BZJHw5Ql684KA1RaTHkcJjD@dpg-cnkfjgun7f5s73drt26g-a.frankfurt-postgres.render.com/yattedb"
+      - key: "postgres://yattedb_lj62_user:EuwRa0H5ufnXuS1dIJazC2Xieun3g7LV@dpg-cnl0ceqcn0vc73d9e2m0-a.frankfurt-postgres.render.com/yattedb_lj62"
         fromDatabase:
           name: yattedb
           property: connectionString
