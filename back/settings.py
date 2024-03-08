@@ -103,7 +103,11 @@ WSGI_APPLICATION = 'back.wsgi.application'
 
 # Replace the SQLite DATABASES configuration with PostgreSQL:
 DATABASES = {
-    'default': dj_database_url.parse(config('DATABASE_URL'))
+    'default': dj_database_url.config(
+        # Replace this value with your local database's connection string.
+        default='postgres://yattedb_ke3p_user:7gJHLj1mRW3MCJbUObnKarkwXQll9jlp@dpg-cnl551ed3nmc73f03ua0-a.oregon-postgres.render.com/yattedb_ke3p',
+        conn_max_age=600
+    )
 }
 
 
